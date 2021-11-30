@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/css/main.7e8cfca1.chunk.css",
-    "main.js": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/js/main.20bf1bfe.chunk.js",
-    "main.js.map": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/js/main.20bf1bfe.chunk.js.map",
-    "runtime-main.js": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/js/runtime-main.d59fa144.js",
-    "runtime-main.js.map": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/js/runtime-main.d59fa144.js.map",
-    "static/css/2.d32bc22f.chunk.css": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/css/2.d32bc22f.chunk.css",
-    "static/js/2.79d28af9.chunk.js": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/js/2.79d28af9.chunk.js",
-    "static/js/2.79d28af9.chunk.js.map": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/js/2.79d28af9.chunk.js.map",
-    "index.html": "/Yulia2021-dev/goit-react-hw-03-phonebook/index.html",
-    "static/css/2.d32bc22f.chunk.css.map": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/css/2.d32bc22f.chunk.css.map",
-    "static/css/main.7e8cfca1.chunk.css.map": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/css/main.7e8cfca1.chunk.css.map",
-    "static/js/2.79d28af9.chunk.js.LICENSE.txt": "/Yulia2021-dev/goit-react-hw-03-phonebook/static/js/2.79d28af9.chunk.js.LICENSE.txt"
+    "main.css": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/css/main.7e8cfca1.chunk.css",
+    "main.js": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/js/main.b20cdfcd.chunk.js",
+    "main.js.map": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/js/main.b20cdfcd.chunk.js.map",
+    "runtime-main.js": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/js/runtime-main.f4ee6fac.js",
+    "runtime-main.js.map": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/js/runtime-main.f4ee6fac.js.map",
+    "static/css/2.d32bc22f.chunk.css": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/css/2.d32bc22f.chunk.css",
+    "static/js/2.bf5a44b0.chunk.js": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/js/2.bf5a44b0.chunk.js",
+    "static/js/2.bf5a44b0.chunk.js.map": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/js/2.bf5a44b0.chunk.js.map",
+    "index.html": "/Yulia2021-dev/goit-react-hw-02-phonebook/index.html",
+    "static/css/2.d32bc22f.chunk.css.map": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/css/2.d32bc22f.chunk.css.map",
+    "static/css/main.7e8cfca1.chunk.css.map": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/css/main.7e8cfca1.chunk.css.map",
+    "static/js/2.bf5a44b0.chunk.js.LICENSE.txt": "/Yulia2021-dev/goit-react-hw-02-phonebook/static/js/2.bf5a44b0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d59fa144.js",
+    "static/js/runtime-main.f4ee6fac.js",
     "static/css/2.d32bc22f.chunk.css",
-    "static/js/2.79d28af9.chunk.js",
+    "static/js/2.bf5a44b0.chunk.js",
     "static/css/main.7e8cfca1.chunk.css",
-    "static/js/main.20bf1bfe.chunk.js"
+    "static/js/main.b20cdfcd.chunk.js"
   ]
 }
