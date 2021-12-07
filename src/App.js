@@ -66,7 +66,16 @@ class App extends Component {
     });
   };
 
+  filterContacts = () => {
+    const { contacts, filter } = this.state;
+    const normalizedFilter = filter.toLowerCase();
+    return contacts.filter(({ name }) =>
+      name.toLowerCase().includes(normalizedFilter)
+    );
+  };
+
   render() {
+    const filteredContacts = this.filterContacts();
     return (
       <div className="container">
         <div>
@@ -86,8 +95,7 @@ class App extends Component {
             filter={this.state.filter}
           />
           <ContactList
-            contacts={this.state.contacts}
-            filter={this.state.filter}
+            contacts={filteredContacts}
             removeContact={this.removeContact}
           />
         </div>
