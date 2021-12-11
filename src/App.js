@@ -76,14 +76,21 @@ class App extends Component {
 
   render() {
     const filteredContacts = this.filterContacts();
+    const {
+      addContact,
+      onChangeName,
+      onChangeNumber,
+      onFilterName,
+      removeContact,
+    } = this.props;
     return (
       <div className="container">
         <div>
           <h2 className="h2">Phonebook</h2>
           <ContactForm
-            addContact={this.addContact}
-            handleNameInput={this.onChangeName}
-            handleNumberInput={this.onChangeNumber}
+            addContact={addContact}
+            handleNameInput={onChangeName}
+            handleNumberInput={onChangeNumber}
             name={this.state.name}
             number={this.state.number}
           />
@@ -91,12 +98,12 @@ class App extends Component {
         <div>
           <h2 className="h2">Contacts</h2>
           <ContactFilter
-            handleFilterName={this.onFilterName}
+            handleFilterName={onFilterName}
             filter={this.state.filter}
           />
           <ContactList
             contacts={filteredContacts}
-            removeContact={this.removeContact}
+            removeContact={removeContact}
           />
         </div>
       </div>
