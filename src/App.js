@@ -1,5 +1,5 @@
 import { React, Component } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuid } from "uuid";
 
 import "./index.scss";
 import "./App.scss";
@@ -19,36 +19,29 @@ class App extends Component {
     };
   }
 
-  onChangeName = (event) => {
-    this.setState({ name: event.target.value });
-  };
-
   onFilterName = (event) => {
     this.setState({ filter: event.target.value });
   };
 
-  onChangeNumber = (event) => {
-    this.setState({ number: event.target.value });
-  };
-
-  addContact = (event) => {
-    event.preventDefault();
+  addContact = ({ name, number }) => {
     this.setState((prevState) => {
       const contact = {
-        id: uuidv4(),
-        name: prevState.name,
-        number: prevState.number,
+        id: uuid(),
+        name,
+        number,
       };
 
-      if (prevState.contacts.some((e) => ciEquals(e.name, contact.name))) {
+      if (
+        prevState.contacts.some((element) =>
+          ciEquals(element.name, contact.name)
+        )
+      ) {
         alert(`${contact.name} is already in contacts`);
         return;
       }
 
       return {
         contacts: [...prevState.contacts, contact],
-        name: "",
-        number: "",
         filter: "",
       };
     });
@@ -76,34 +69,21 @@ class App extends Component {
 
   render() {
     const filteredContacts = this.filterContacts();
-    const {
-      addContact,
-      onChangeName,
-      onChangeNumber,
-      onFilterName,
-      removeContact,
-    } = this.props;
     return (
       <div className="container">
         <div>
           <h2 className="h2">Phonebook</h2>
-          <ContactForm
-            addContact={addContact}
-            handleNameInput={onChangeName}
-            handleNumberInput={onChangeNumber}
-            name={this.state.name}
-            number={this.state.number}
-          />
+          <ContactForm onSubmit={this.addContact} />
         </div>
         <div>
           <h2 className="h2">Contacts</h2>
           <ContactFilter
-            handleFilterName={onFilterName}
+            handleFilterName={this.onFilterName}
             filter={this.state.filter}
           />
           <ContactList
             contacts={filteredContacts}
-            removeContact={removeContact}
+            removeContact={this.removeContact}
           />
         </div>
       </div>
