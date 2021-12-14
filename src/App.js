@@ -9,15 +9,10 @@ import ContactFilter from "./components/ContactFilter/ContactFilter";
 import { ciEquals } from "./helpers";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      contacts: [],
-      name: "",
-      number: "",
-      filter: "",
-    };
-  }
+  state = {
+    contacts: [],
+    filter: "",
+  };
 
   onFilterName = (event) => {
     this.setState({ filter: event.target.value });
@@ -52,8 +47,6 @@ class App extends Component {
     this.setState((prevState) => {
       return {
         contacts: prevState.contacts.filter((e) => e.id !== id),
-        name: "",
-        number: "",
         filter: "",
       };
     });
@@ -69,6 +62,7 @@ class App extends Component {
 
   render() {
     const filteredContacts = this.filterContacts();
+    const { filter } = this.state;
     return (
       <div className="container">
         <div>
@@ -77,10 +71,7 @@ class App extends Component {
         </div>
         <div>
           <h2 className="h2">Contacts</h2>
-          <ContactFilter
-            handleFilterName={this.onFilterName}
-            filter={this.state.filter}
-          />
+          <ContactFilter handleFilterName={this.onFilterName} filter={filter} />
           <ContactList
             contacts={filteredContacts}
             removeContact={this.removeContact}
